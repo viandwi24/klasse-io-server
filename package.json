@@ -9,7 +9,7 @@
     "socket.io": "^4.1.3"
   },
   "scripts": {
-    "run": "node index.js",
+    "start": "node index.js",
     "dev": "nodemon -q -x \"clear && node index.js\""
   }
 }
