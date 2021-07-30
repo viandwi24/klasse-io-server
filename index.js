@@ -5,6 +5,11 @@ require('dotenv').config()
 
 const app = express();
 
+// settings
+const OPTIONS = {
+  PORT: process.env.PORT || 8000,
+}
+
 // parse application/json
 app.use(bodyParser.json())
 
@@ -165,6 +170,5 @@ function update() {
 
 
 // listening port
-const PORT = process.env.PORT || 8000
-httpServer.listen(PORT)
+httpServer.listen(OPTIONS.PORT)
 timer = setTimeout(update, 200)
